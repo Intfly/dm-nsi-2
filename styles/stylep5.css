@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300&display=swap');
+
+body{
+    height: 100vh;
+    width:100vw;
+    margin:0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 5vw 25vw auto;
+    grid-auto-rows: 100vh;
+}
+
+.top{
+    margin:7vh 0 3vh 0;
+}
+h1{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(53, 53, 53);
+    font-size:2.5em;
+    text-decoration: underline;
+    text-decoration-thickness: .03em;
+    text-underline-offset: .1em;
+    text-decoration-color: rgb(63, 63, 63);
+    font-weight: 100;
+}
+
+.container{
+    overflow:scroll;
+    overflow-x: hidden;
+}
+
+.images{
+    width:70%;
+}
+
+.pc{
+    background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
+    text-align:center;
+}
+
+#case{
+    position:relative;
+    height:80%;
+    width:auto;
+    top:10%;
+}
+
+.compo + .compo{
+    margin-top:3vh;
+}
+
+/*largeur de la barre de défilement*/
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+/*arrière plan de la barre de défilement*/
+::-webkit-scrollbar-track { 
+  border-radius: 10px;
+}
+ 
+/*partie bleue de la barre de défilement*/
+::-webkit-scrollbar-thumb {
+  background: #acb1e2; 
+  border-radius: 10px;
+}
+
+/*partie bleue de la barre de défilement quand on passe notre souris dessus*/
+::-webkit-scrollbar-thumb:hover {
+  background: #7075a3; 
+}
+
+.interro{
+    display:none;
+}
+
+#busd{
+    position:relative;
+    left:2em;
+    top:2em;
+    width:4em;
+    height:4em;
+    border-radius:2em;
+    border:none;
+    box-shadow: 0 0 5px 2px rgb(109, 109, 109);
+    background-color: #fff ;
+}
+#s1,#s2,#s3{
+    margin-left:7%;
+    height:7%;
+    background-color: #000;
+    border-radius: .2em;
+    width:85%;
+}
+
+#s2,#s3{
+    margin-top:18%;
+}
+
+#s2{
+    width:65%;
+}
