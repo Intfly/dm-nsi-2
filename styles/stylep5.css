@@ -92,7 +92,7 @@ h1{
 }
 
 #busd{
-    position:absolute;
+    position:relative;
     left:1.7em;
     top:5em;
     width:4em;
@@ -120,12 +120,13 @@ h1{
 }
 
 
-button + a,a+a{
-    margin-top:10vh;
+div + a,a+a{
+    margin-top:15vh;
 }
 
-#recharger{
-    position:absolute;
+#buttonmenu{
+    position:relative;
+    display:block;
     left:1.4em;
     top:5em;
     width:3.38em;
@@ -137,7 +138,12 @@ button + a,a+a{
     box-shadow: 0 0 5px 2px rgb(109, 109, 109);
 }
 
-.logo96px{
+#logo96px{
     width:80%;
     margin:10% 0 0 8%;
+}
+
+#logo512px{
+    width:80%;
+    margin:9% 0 0 10%;
 }
