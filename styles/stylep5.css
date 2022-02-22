@@ -9,8 +9,23 @@ body{
 
 .grid{
     display: grid;
-    grid-template-columns: 0px 5vw  25vw auto;
+    grid-template-columns: 0px 5vw 25vw auto;
     grid-auto-rows: 100vh;
+}
+
+#boutonsortie{
+    position:absolute;
+    height:100%;
+    width:1%;/*!important permet de supprimer la valeur minimale de largeur d'un bouton*/
+    border:none;
+    opacity:0;
+    z-index:3;
+    padding:0;
+}
+
+.boutonsortiedev{
+    left:25vw;
+    width: 100%!important;
 }
 
 .top{
@@ -48,10 +63,23 @@ h1{
 .images{
     width:70%;
     margin-left:10%;
+    cursor: pointer;
+}
+.composants{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#d1{
+    background-image: url('../images/mb.png');
+    width:500px;
+    height:500px;
+    
 }
 
 .pc{
-    background: linear-gradient(109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
+    background: linear-gradient(109.6deg, rgba(156,252,248,1), rgba(110,123,251,1));
     text-align:center;
 }
 
@@ -62,9 +90,14 @@ h1{
     top:10%;
 }
 
+.compo{
+    display: block;
+}
+
 .compo + .compo{
     margin-top:3vh;
 }
+
 
 /*largeur de la barre de défilement*/
 ::-webkit-scrollbar {
@@ -87,7 +120,8 @@ h1{
   background: #7075a3; 
 }
 
-.interro{
+
+.interrogation_txt{
     display:none;
 }
 
@@ -103,6 +137,23 @@ h1{
     z-index:2;
     box-shadow: 0 0 5px 2px rgb(109, 109, 109);
 }
+
+.barre{
+    overflow: hidden;
+}
+
+h2{
+    position: relative;
+    font-family: 'Open-sans', sans-serif;
+    font-size:2.5em;
+    margin:1.7em 0 0 0;
+    left:2.5em;
+}
+
+h2+h2{
+    margin-top:16.5vh;
+}
+
 #s1,#s2,#s3{
     margin-left:7%;
     height:5%;
@@ -124,7 +175,7 @@ div + a,a+a{
     margin-top:15vh;
 }
 
-#buttonmenu{
+.buttonmenu{
     position:relative;
     display:block;
     left:1.4em;
@@ -147,3 +198,4 @@ div + a,a+a{
     width:80%;
     margin:9% 0 0 10%;
 }
+

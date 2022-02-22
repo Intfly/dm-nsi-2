@@ -7,50 +7,61 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <div>
+        <button id="boutonsortie" onclick="menu()"></button>
+    </div>
     <div class="grid">
         <div class="dropdown">
             <div class="sand">
                 <button id="busd" onclick="menu()"><div id="s1"></div><div id="s2"></div><div id="s3"></div></button>
             </div>
-            <a href="http://127.0.0.1:5500/GitHub/DM-NSI-2/p5.html" id="buttonmenu"><img src="images/refresh.png" alt="bouton relance site" id="logo96px"></a>
-            <a href="https://github.com/Intfly/DM-NSI-2" id ="buttonmenu"><img src="images/github.png" alt="logo github" id="logo512px"></a>
+            <a href="http://127.0.0.1:5500/GitHub/DM-NSI-2/p5.html" class="buttonmenu"><img src="images/refresh.png" alt="bouton relance site" id="logo96px"></a>
+            <a href="https://github.com/Intfly/DM-NSI-2"  class="buttonmenu"><img src="images/github.png" alt="logo github" id="logo512px"></a>
+            <a href="" class="buttonmenu"><img src="images/web.png" alt="logo monde" id="logo512px"></a>
         </div> 
-        <div class="barre"></div>
+        <div class="barre">
+            <h2>menu</h2>
+            <h2>recharger</h2>
+            <h2>repo github</h2>
+            <h2>autres sites</h2>
+        </div>
         <div class="container">
             <div class="top">
                 <h1>composants</h1>
             </div>
-            <div class="compo">
-                <div class="interro"><p id="p1">la carte mère est le composant principal du pc, elle relie les composants entre eux. Elle se place au centre gauche du boitier.</p></div>
-                <img src="images/mb.png" alt="" class="images">
-            </div>
-            <div class="compo">
-                <div class="interro"><p id="p2">le CPU(ou processeur) met en relation les différents composants du pc. Il se situe au centre de la carte mère.</p></div>
-                <img src="images/cpu.png" alt="" class="images">
-            </div>
-            <div class="compo">
-                <div class="interro"><p id="p3">Le ventirad permet de refroidir le processeur en se mettant dessus.</p></div>
-                <img src="images/cooler.png" alt="" class="images">
-            </div>
-            <div class="compo">
-                <div class="interro"><p id="p4">la mémoire ram traite les donnés devant être accessible rapidement. elle se situe à droite du processeur.</p></div>
-                <img src="images/ram.png" alt="" class="images">
-            </div>
-            <div class="compo">
-                <div class="interro"><p id="p1">le SSD est technologie remplaçant les disques durs conventionnels, ils sont plus rapides mais plus chers.</p></div>
-                <img src="images/ssd.png" alt="" class="images">
-            </div>
-            <div class="compo">
-                <div class="interro"><p id="p6">le HDD(ou disque dur) permet de stocker des données</p></div>
-                <img src="images/hddp.png" alt="" class="images">
-            </div>
-            <div class="compo">
-                <div class="interro"><p id="p7">l'alimentation alimente les différents composants en éléctricité</p></div>
-                <img src="images/alim.png" alt="" class="images">
-            </div>
-            <div class="compo">
-                <div class="interro"><p id="p8">le GPU(ou carte grapique) s'occupe des calculs et de l'affichages des informations</p></div>
-                <img src="images/gpuf.png" alt="" class="images">
+            <div class="composants">
+                <div class="compo">
+                    <div class="interro"><p id="p1" class="interrogation_txt">la carte mère est le composant principal du pc, elle relie les composants entre eux. Elle se place au centre gauche du boitier.</p></div>
+                    <div id="d1" draggable="true" class="images"></div>
+                </div>
+                <div class="compo">
+                    <div class="interro"><p id="p2" class="interrogation_txt">le CPU(ou processeur) met en relation les différents composants du pc. Il se situe au centre de la carte mère.</p></div>
+                    <img src="images/cpu.png" alt="" class="images" draggable="true">
+                </div>
+                <div class="compo">
+                    <div class="interro"><p id="p3" class="interrogation_txt">Le ventirad permet de refroidir le processeur en se mettant dessus.</p></div>
+                    <img src="images/cooler.png" alt="" class="images">
+                </div>
+                <div class="compo">
+                    <div class="interro"><p id="p4" class="interrogation_txt">la mémoire ram traite les donnés devant être accessible rapidement. elle se situe à droite du processeur.</p></div>
+                    <img src="images/ram.png" alt="" class="images">
+                </div>
+                <div class="compo">
+                    <div class="interro"><p id="p1" class="interrogation_txt">le SSD est technologie remplaçant les disques durs conventionnels, ils sont plus rapides mais plus chers.</p></div>
+                    <img src="images/ssd.png" alt="" class="images">
+                </div>
+                <div class="compo">
+                    <div class="interro"><p id="p6" class="interrogation_txt">le HDD(ou disque dur) permet de stocker des données</p></div>
+                    <img src="images/hddp.png" alt="" class="images">
+                </div>
+                <div class="compo">
+                    <div class="interro"><p id="p7" class="interrogation_txt">l'alimentation alimente les différents composants en éléctricité</p></div>
+                    <img src="images/alim.png" alt="" class="images">
+                </div>
+                <div class="compo">
+                    <div class="interro"><p id="p8" class="interrogation_txt">le GPU(ou carte grapique) s'occupe des calculs et de l'affichages des informations</p></div>
+                    <img src="images/gpuf.png" alt="" class="images">
+                </div>
             </div>
         </div>
         <div class="pc">
