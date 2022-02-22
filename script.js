@@ -12,7 +12,7 @@ function menu(){
     }
 }
 
-const base = document.querySelectorAll('.d1');
+const base = document.querySelector('.d1');
 const box = document.querySelectorAll('.compopc');
 
 
@@ -28,7 +28,7 @@ function dragStart() {
 }
 
 function dragEnd() {
-    this.className = 'base';
+    this.className = 'd1';
 }
 
 
