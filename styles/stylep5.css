@@ -61,21 +61,48 @@ h1{
 }
 
 .images{
-    width:70%;
-    margin-left:10%;
+    width:25em;
+    height: 17.85em;
     cursor: pointer;
 }
 .composants{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-#d1{
+.d1{
     background-image: url('../images/mb.png');
-    width:500px;
-    height:500px;
-    
+    background-size: cover;   
+}
+#d2{
+    background-image: url('../images/cpu.png');
+    background-size: cover;   
+}
+#d3{
+    background-image: url('../images/cooler.png');
+    background-size: cover;   
+}
+#d4{
+    background-image: url('../images/ram.png');
+    background-size: cover;   
+}
+#d5{
+    background-image: url('../images/ssd.png');
+    background-size: cover;   
+}
+#d6{
+    background-image: url('../images/hddp.png');
+    background-size: cover;   
+}
+#d7{
+    background-image: url('../images/alim.png');
+    background-size: cover;   
+}
+#d8{
+    background-image: url('../images/gpuf.png');
+    background-size: cover;   
 }
 
 .pc{
@@ -83,15 +110,57 @@ h1{
     text-align:center;
 }
 
+.compopc{
+    position:absolute;
+    width:10em;
+    height:10em;
+    border-radius: 2em;
+    border: .2em dashed rgba(255, 255, 255, 0.699);
+}
+
+#carte-mere{
+    bottom: 52vh;
+    margin-left: 25vw;
+}
+
+#cpu{
+    bottom:55vh;
+    margin-left:30vw;
+}
+#cooler{
+    bottom:55vh;
+    margin-left:30vw;  
+}
+
+#ram{
+    bottom:55vh;
+    margin-left:35vw;  
+}
+
+#ssd{
+    bottom:45vh;
+    margin-left:25vw; 
+}
+
+#hdd{
+    bottom:21vh;
+    margin-left:43vw;
+}
+
+#alim{
+    bottom: 17vh;
+    margin-left:15vw;
+}
+
+.survol{
+    border: .2em dashed rgba(255, 255, 255, 0.884);
+}
+
 #case{
     position:relative;
     height:80%;
     width:auto;
     top:10%;
-}
-
-.compo{
-    display: block;
 }
 
 .compo + .compo{
@@ -199,3 +268,17 @@ div + a,a+a{
     margin:9% 0 0 10%;
 }
 
+
+
+
+
+.tenu {
+    border: solid 5px #ccc;
+}
+
+
+
+.hovered {
+    background: #f4f4f4;
+    border-style: dashed;
+}
