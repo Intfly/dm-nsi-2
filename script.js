@@ -20,7 +20,13 @@ function boutonfiniok(){
 function btinterro(id){
     let idc = id.replace('b', '');
     let idcc = idc.replace('t','#p');
-    document.querySelector(idcc).style.display ="block";
+    if (getComputedStyle(document.querySelector(idcc)).display == "none"){/*la fonction getComputedStyle() renvoie les propriétés css d'un élément. Nous comparons ensuite la valeur de la propriété "display" avec "block", si l'element a pour propriété display="none", alors l'instruction conditionelle est validée.*/ 
+        document.querySelector(idcc).style.display ="block";
+    }
+    else{
+        document.querySelector(idcc).style.display ="none";
+    }
+    
 }
 
 let base = document.querySelectorAll('.images');
@@ -69,6 +75,11 @@ function dragDrop() {
                     element.classList.add("compopcdev");
                 } 
                 document.getElementById("carte-mere").classList.add('cm1');
+            }
+            console.log(compo);
+            if ( compo == 1){
+                document.getElementById("cpu").classList.add('cpu1');
+                document.getElementById("d2").classList.add('max');
             }
             compo_array.push(i);/*ajout de l'indice de l'élément placé dans l'array "compo_array"(équivalent d'un tableau)*/
             if (compo_array.length == 8){/*si tous les éléments ont été placés, alors la longueur de l'array vaut 8 donc le bouton nous disant qu'on a fini apparaît*/
