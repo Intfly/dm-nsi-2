@@ -6,6 +6,9 @@ body{
     margin:0;
     overflow: hidden;
 }
+
+
+
 #fini{
     display:none;
     position:absolute;
@@ -14,7 +17,7 @@ body{
     width:15vw;
     height:15vh;
     border-radius: 2em;
-    box-shadow: 0 0 10vw 45vw rgba(0, 0, 0, 0.459);
+    box-shadow: 0 0 10vw 45vw rgba(0, 0, 0, 0.322);
     background: #fff;
     text-align: center;
     z-index:8;
@@ -350,7 +353,11 @@ div + a,a+a{
     margin:9% 0 0 10%;
 }
 
-
-
+#busd:hover,#boutonfini:hover{
+    background-color:#e6e6e6;
+}
+a:hover{
+    background:#e6e6e6;
+}
 
 

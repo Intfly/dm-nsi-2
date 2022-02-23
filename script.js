@@ -1,4 +1,5 @@
 var etendu = 0
+var compo_array=[]
 function menu(){
     if (etendu == 0){
         document.querySelector(".barre").classList.add("dev");
@@ -44,28 +45,13 @@ function dragEnd() {
 
 for (let vide of box) {
     vide.addEventListener('dragover', dragOver);
-    vide.addEventListener('dragenter', dragEnter);
-    vide.addEventListener('dragleave', dragLeave);
     vide.addEventListener('drop', dragDrop);
 }
-
-
 
 function dragOver(e) {
     e.preventDefault()
 }
 
-function dragEnter(e) {
-    e.preventDefault()
-    this.classList.add('survol');
-}
-
-function dragLeave() {
-    this.classList.remove('survol');
-    this.classList.add('compopc');
-}
-
-var compo_array=[]
 function dragDrop() {
     for (let i=0;i<box.length;i++){
         if (box.item(i) ==this && i ==compo){
@@ -78,7 +64,7 @@ function dragDrop() {
                 } 
                 document.getElementById("carte-mere").classList.add('cm1');
             }
-            compo_array.push("1");/*ajoute un element à l'array "compo_array"(équivalent d'un tableau)*/
+            compo_array.push(i);/*ajout de l'indice de l'élément placé dans l'array "compo_array"(équivalent d'un tableau)*/
             if (compo_array.length == 8){/*si tous les éléments ont été placés, alors la longueur de l'array vaut 8 donc le bouton nous disant qu'on a fini apparaît*/
                 document.getElementById("fini").style.display="block";
             }
