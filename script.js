@@ -78,19 +78,40 @@ function dragDrop() {
                 }
                 document.getElementById("carte-mere").classList.add('cm1');
             }
-            if ( compo == 1){                
+            else if ( compo == 1){                
                 document.getElementById("cpu").classList.add('cpu1');
                 document.getElementById("cooler").style.zIndex="9";
-                document.getElementById("d2").style.marginTop = "11.25vh";
+                document.getElementById("d2").style.marginTop = "12.3vh";
             }
             else if(compo == 2){
-                document.getElementById("cooler").classList.add('cooler1');
-                document.getElementById("d3").style.bottom = "13vh";  
+                document.getElementById("cooler").classList.add('cooler1'); 
             }  
             else if(compo == 3){
                 document.getElementById("ram").classList.add('ram1');
                 document.getElementById("d4").style.backgroundImage = "url('images/ramt.png')";
+                document.getElementById("d4").style.bottom = "2vh";
+            }
+            else if(compo == 4){
+                document.getElementById("ssd").classList.add('ssd1');
+                document.getElementById("d5").style.backgroundImage = "url('images/ssdm.png')";
+                document.getElementById("d5").style.left = "1.5em";
+            }
+            else if(compo == 5){
+                document.getElementById("d6").style.backgroundImage = "url('images/hddm.png')";
+                document.getElementById("hdd").style.position= "absolute";
+                document.getElementById("d6").style.width = "90%";
+                document.getElementById("d6").style.marginLeft = "10%";
+            }
 
+            else if(compo == 6){
+                document.getElementById("alim").classList.add('alim1');
+                document.getElementById("d7").style.backgroundImage = "url('images/alimm.png')";
+                document.getElementById("d7").style.height = "200%";
+                document.getElementById("d7").style.width = "120%";
+            }
+            else if (compo == 7){
+                document.getElementById("gpu").classList.add('gpu1');
+                document.getElementById("d8").style.backgroundImage = "url('images/gpus.png')";
             }
 
             compo_array.push(i);/*ajout de l'indice de l'élément placé dans l'array "compo_array"(équivalent d'un tableau)*/

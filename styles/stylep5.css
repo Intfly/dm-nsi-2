@@ -127,22 +127,9 @@ h1{
     background-size: cover;   
 }
 
-.cpu1{
-    position: relative;
-    width:20%;
-    height:auto;
-    z-index:7;
-}
-
 #d3{
     background-image: url('../images/cooler.png');
     background-size: cover;   
-}
-.cooler1{
-    position: relative;
-    width:20%;
-    height:auto;
-    z-index:8;
 }
 
 #d4{
@@ -150,29 +137,122 @@ h1{
     background-size: contain;
     background-repeat: no-repeat;  
 }
-.ram1{
-    position:relative;
-    height:9vh;
-    width:auto;
-}
 
 #d5{
     background-image: url('../images/ssd.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 #d6{
     background-image: url('../images/hddp.png');
-    background-size: cover;   
+    background-size: contain;
+    background-repeat: no-repeat; 
 }
 #d7{
     background-image: url('../images/alim.png');
-    background-size: cover;   
+    background-size: contain;
+    background-repeat: no-repeat;   
 }
+
 #d8{
     background-image: url('../images/gpuf.png');
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+#carte-mere{
+    width:17%;
+    height:38vh;
+    display:block;
+    bottom: 40vh;
+    margin-left:19vw;
+}
+
+#cpu{
+    width:3em;
+    height:3em;
+    bottom:61vh;
+    margin-left:26.6vw;
+    border-radius: 1.5em;
+    z-index:8;
+}
+.cpu1{
+    position: relative;
+    width:20%;
+    height:auto;
+    z-index:7;
+}
+
+#cooler{
+    width:6em;
+    height:6em;
+    bottom:58vh;
+    margin-left:25vw; 
+    z-index:7;
+}
+.cooler1{
+    position: absolute;
+    width:20%;
+    height:auto;
+    z-index:8;
+}
+
+#ram{
+    width:2em;
+    height:8.7em;
+    bottom:52.9vh;
+    margin-left:32vw;  
+}
+.ram1{
+    position:absolute;
+    z-index:9;
+}
+
+#ssd{
+    height:2.2vh;
+    width:7em;
+    bottom:53.2vh;
+    margin-left:23vw; 
+}
+.ssd1{
+    position:absolute;
+    height:3vh!important ;
+}
+
+#hdd{
+    width:8.8em;
+    height:7.5em;
+    bottom:21vh;
+    margin-left:40vw;
+}
+
+#alim{
+    width:10em;
+    height:6.5em;
+    bottom: 17vh;
+    margin-left:17vw;
+}
+.alim1{
+    position:absolute;
+    bottom:15.6vh!important;
+    margin-left:18vw!important;
+}
+
+#gpu{
+    height:7vh;
+    width:20%;
+    bottom:45vh;
+    margin-left:17%;
+}
+.gpu1{
+    position:absolute;
+}
+#case{
+    position:relative;
+    height:80%;
+    width:auto;
+    top:10%;
 }
 
 .pc{
@@ -191,77 +271,12 @@ h1{
     display:block;
 }
 
-#carte-mere{
-    width:17%;
-    height:38vh;
-    display:block;
-    bottom: 40vh;
-    margin-left:19vw;
-}
-
-#cpu{
-    width:3em;
-    height:3em;
-    bottom:60vh;
-    margin-left:26.6vw;
-    border-radius: 1.5em;
-    z-index:8;
-}
-#cooler{
-    width:6em;
-    height:6em;
-    bottom:58vh;
-    margin-left:25vw; 
-    z-index:7;
-}
-
-#ram{
-    width:2em;
-    height:10em;
-    bottom:52.5vh;
-    margin-left:31.5vw;  
-}
-
-#ssd{
-    height:2vh;
-    width:7em;
-    bottom:53.7vh;
-    margin-left:23vw; 
-}
-
-#hdd{
-    width:8.8em;
-    height:7.5em;
-    bottom:21vh;
-    margin-left:40vw;
-}
-
-#alim{
-    width:10em;
-    height:6.5em;
-    bottom: 17vh;
-    margin-left:17vw;
-}
-
-#gpu{
-    height:7vh;
-    width:20%;
-    bottom:45vh;
-    margin-left:17%;
-}
-
-#case{
-    position:relative;
-    height:80%;
-    width:auto;
-    top:10%;
-}
-
 .compo + .compo{
-    margin-top:3vh;
+    margin-top:7vh;
 }
 
 .compo{
+    position: relative;
     width:15em;
     height: 15em;
 }
