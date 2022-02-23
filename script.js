@@ -12,6 +12,10 @@ function menu(){
     }
 }
 
+function boutonfiniok(){
+    document.getElementById("fini").style.display="none";
+}
+
 let base = document.querySelectorAll('.images');
 let box = document.querySelectorAll('.compopc');
 
@@ -25,6 +29,7 @@ for (let bas of base){
 
 function dragStart() {
     setTimeout(() => (this.className = 'invisible'), 0);/*enlève toutes les classes de l'élément et ajoute une classe vierge afin de faire disparaitre l'élément en déplacement*/
+    
     for (let i=0;i<base.length;i++){
         if (base.item(i) ==this){
             globalThis.compo = i;
@@ -60,7 +65,7 @@ function dragLeave() {
     this.classList.add('compopc');
 }
 
-
+var compo_array=[]
 function dragDrop() {
     for (let i=0;i<box.length;i++){
         if (box.item(i) ==this && i ==compo){
@@ -71,7 +76,11 @@ function dragDrop() {
                 for(element of box){
                     element.classList.add("compopcdev");
                 } 
-                document.getElementById("carte-mere").classList.add('cm1')
+                document.getElementById("carte-mere").classList.add('cm1');
+            }
+            compo_array.push("1");/*ajoute un element à l'array "compo_array"(équivalent d'un tableau)*/
+            if (compo_array.length == 8){/*si tous les éléments ont été placés, alors la longueur de l'array vaut 8 donc le bouton nous disant qu'on a fini apparaît*/
+                document.getElementById("fini").style.display="block";
             }
         }
     }

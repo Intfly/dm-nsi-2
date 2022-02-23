@@ -6,6 +6,32 @@ body{
     margin:0;
     overflow: hidden;
 }
+#fini{
+    display:none;
+    position:absolute;
+    left:42.5vw;
+    top:42.5vh;
+    width:15vw;
+    height:15vh;
+    border-radius: 2em;
+    box-shadow: 0 0 10vw 45vw rgba(0, 0, 0, 0.459);
+    background: #fff;
+    text-align: center;
+    z-index:8;
+}
+
+#pfini{
+font-family: 'Roboto','sans-serif';
+margin-bottom:1.5em;
+}
+#boutonfini{
+    border:none;
+    background: #fff;
+    box-shadow: 0 0 .5em .2em rgba(0, 0, 0, 0.356);
+    border-radius:.6em;
+    width:3em;
+    height:2.2em;
+}
 
 .grid{
     display: grid;
@@ -71,7 +97,10 @@ h1{
     justify-content: center;
     flex-direction: column;
 }
-
+.max{
+    width:100%;
+    height:100%;
+}
 #d1{
     background-image: url('../images/mb.png');
     background-size: contain;
@@ -80,17 +109,31 @@ h1{
 .cm1{
     position:absolute;
     bottom:15vh;
-    
 }
 
 #d2{
     background-image: url('../images/cpu.png');
     background-size: cover;   
 }
+
+.cpu1{
+    position: relative;
+    width:20%;
+    height:auto;
+    z-index:8;
+}
+
 #d3{
     background-image: url('../images/cooler.png');
     background-size: cover;   
 }
+.cooler1{
+    position: relative;
+    width:20%;
+    height:auto;
+    z-index:7;
+}
+
 #d4{
     background-image: url('../images/ram.png');
     background-size: contain;
@@ -151,7 +194,7 @@ h1{
     width:4.2em;
     height:4.2em;
     bottom:58.8vh;
-    margin-left:25.9vw; 
+    margin-left:26.2vw; 
     z-index:7;
 }
 
