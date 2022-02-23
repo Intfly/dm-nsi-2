@@ -19,8 +19,8 @@ function boutonfiniok(){
 
 function btinterro(id){
     let idc = id.replace('b', '');
-    let idcc = idc.replace('t','');
-    console.log(idcc);
+    let idcc = idc.replace('t','#p');
+    document.querySelector(idcc).style.display ="block";
 }
 
 let base = document.querySelectorAll('.images');

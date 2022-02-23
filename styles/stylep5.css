@@ -7,7 +7,13 @@ body{
     overflow: hidden;
 }
 
-
+.boutoninterro{
+    margin-left:90%;
+    border:solid .1em rgba(51, 51, 51, 0.555);
+    background:#fff;
+    border-radius: 1em;
+    color:rgba(51, 51, 51, 0.555);
+}
 
 #fini{
     display:none;
@@ -236,11 +242,6 @@ h1{
     margin-left:17%;
 }
 
-.survol{
-    background: #f4f4f450;
-    border: .2em dashed rgba(255, 255, 255, 0.884);
-}
-
 #case{
     position:relative;
     height:80%;
@@ -277,6 +278,8 @@ h1{
 
 .interrogation_txt{
     display:none;
+    color: rgb(53, 53, 53);
+    font-family: "Roboto", sans-serif;
 }
 
 #busd{
