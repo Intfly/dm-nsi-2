@@ -60,6 +60,7 @@ for (let vide of box) {
     vide.addEventListener('drop', dragDrop);
 }
 
+
 function dragOver(e) {
     e.preventDefault()
 }
@@ -69,21 +70,32 @@ function dragDrop() {
         if (box.item(i) ==this && i ==compo){
             this.append(base[compo]);
             this.classList.remove('compopc');
-            this.classList.remove('survol')
+            var elem_deplacer = document.getElementById("di"+(compo+1));
+            elem_deplacer.classList.add("mini");
             if (compo == 0){
                 for(element of box){
                     element.classList.add("compopcdev");
-                } 
+                }
                 document.getElementById("carte-mere").classList.add('cm1');
             }
-            console.log(compo);
-            if ( compo == 1){
+            if ( compo == 1){                
                 document.getElementById("cpu").classList.add('cpu1');
-                document.getElementById("d2").classList.add('max');
+                document.getElementById("cooler").style.zIndex="9";
+                document.getElementById("d2").style.marginTop = "11.25vh";
             }
+            else if(compo == 2){
+                document.getElementById("cooler").classList.add('cooler1');
+                document.getElementById("d3").style.bottom = "13vh";  
+            }  
+            else if(compo == 3){
+                document.getElementById("ram").classList.add('ram1');
+                document.getElementById("d4").style.backgroundImage = "url('images/ramt.png')";
+
+            }
+
             compo_array.push(i);/*ajout de l'indice de l'élément placé dans l'array "compo_array"(équivalent d'un tableau)*/
             if (compo_array.length == 8){/*si tous les éléments ont été placés, alors la longueur de l'array vaut 8 donc le bouton nous disant qu'on a fini apparaît*/
-                document.getElementById("fini").style.display="block";
+                document.getElementById("fini").style.display="block";/*fait apparaître le message disant qu'on a réussi*/
             }
         }
     }
