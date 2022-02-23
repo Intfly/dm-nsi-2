@@ -168,7 +168,9 @@ h1{
     bottom: 40vh;
     margin-left:19vw;
 }
-
+.cooler1,.ram1,.ssd1,.alim1,.hdd1,.gpu1{
+    position:absolute;
+}
 #cpu{
     width:3em;
     height:3em;
@@ -178,9 +180,7 @@ h1{
     z-index:8;
 }
 .cpu1{
-    position: relative;
-    width:20%;
-    height:auto;
+    position:relative;
     z-index:7;
 }
 
@@ -192,20 +192,16 @@ h1{
     z-index:7;
 }
 .cooler1{
-    position: absolute;
-    width:20%;
-    height:auto;
     z-index:8;
 }
 
 #ram{
     width:2em;
     height:8.7em;
-    bottom:52.9vh;
+    bottom:54.5vh;
     margin-left:32vw;  
 }
 .ram1{
-    position:absolute;
     z-index:9;
 }
 
@@ -216,7 +212,6 @@ h1{
     margin-left:23vw; 
 }
 .ssd1{
-    position:absolute;
     height:3vh!important ;
 }
 
@@ -234,7 +229,6 @@ h1{
     margin-left:17vw;
 }
 .alim1{
-    position:absolute;
     bottom:15.6vh!important;
     margin-left:18vw!important;
 }
@@ -245,9 +239,7 @@ h1{
     bottom:45vh;
     margin-left:17%;
 }
-.gpu1{
-    position:absolute;
-}
+
 #case{
     position:relative;
     height:80%;

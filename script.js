@@ -112,6 +112,7 @@ function dragDrop() {
             else if (compo == 7){
                 document.getElementById("gpu").classList.add('gpu1');
                 document.getElementById("d8").style.backgroundImage = "url('images/gpus.png')";
+                document.getElementById("d8").style.bottom = "1vh";
             }
 
             compo_array.push(i);/*ajout de l'indice de l'élément placé dans l'array "compo_array"(équivalent d'un tableau)*/
