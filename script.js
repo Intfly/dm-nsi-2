@@ -1,4 +1,4 @@
-let etendu = 0
+var etendu = 0
 function menu(){
     if (etendu == 0){
         document.querySelector(".barre").classList.add("dev");
@@ -12,58 +12,68 @@ function menu(){
     }
 }
 
-const base = document.querySelector('.d1');
-const box = document.querySelectorAll('.compopc');
+let base = document.querySelectorAll('.images');
+let box = document.querySelectorAll('.compopc');
 
 
+for (let bas of base){
+    bas.addEventListener('dragstart', dragStart);
+    bas.addEventListener('dragend', dragEnd);
+}
 
-base.addEventListener('dragstart', dragStart);
-base.addEventListener('dragend', dragEnd);
 
 
 function dragStart() {
-    this.className += ' tenu';
-
-    setTimeout(() => (this.className = 'invisible'), 0);
+    setTimeout(() => (this.className = 'invisible'), 0);/*enlève toutes les classes de l'élément et ajoute une classe vierge afin de faire disparaitre l'élément en déplacement*/
+    for (let i=0;i<base.length;i++){
+        if (base.item(i) ==this){
+            globalThis.compo = i;
+        }
+    }
 }
 
 function dragEnd() {
-    this.className = 'd1';
+    this.className = 'images';/*remet une classe à l'élément afin de le faire réapparaître*/
 }
 
 
-for (const vide of box) {
-
+for (let vide of box) {
     vide.addEventListener('dragover', dragOver);
-
     vide.addEventListener('dragenter', dragEnter);
-
     vide.addEventListener('dragleave', dragLeave);
-
     vide.addEventListener('drop', dragDrop);
-
-
 }
 
 
 
 function dragOver(e) {
     e.preventDefault()
-
-
 }
 
 function dragEnter(e) {
-    e.preventDefault();
-    this.className += ' hovered';
+    e.preventDefault()
+    this.classList.add('survol');
 }
 
 function dragLeave() {
-    this.className = 'compopc';
+    this.classList.remove('survol')
+    this.classList.add('compopc');
 }
 
 
 function dragDrop() {
-    this.className = 'compopc';
-    this.append(base);
+    this.classList.remove('survol')
+
+    for (let i=0;i<box.length;i++){
+        if (box.item(i) ==this && i ==compo){
+            this.append(base[compo]);
+            this.classList.remove('compopc');
+            if (compo == 0){
+                for(element of box){
+                    element.classList.add("compopcdev");
+                } 
+                document.getElementById("carte-mere").classList.add('cm1')
+            }
+        }
+    }
 }
