@@ -17,6 +17,12 @@ function boutonfiniok(){
     document.getElementById("fini").style.display="none";
 }
 
+function btinterro(id){
+    let idc = id.replace('b', '');
+    let idcc = idc.replace('t','');
+    console.log(idcc);
+}
+
 let base = document.querySelectorAll('.images');
 let box = document.querySelectorAll('.compopc');
 
