@@ -56,18 +56,17 @@ function dragEnter(e) {
 }
 
 function dragLeave() {
-    this.classList.remove('survol')
+    this.classList.remove('survol');
     this.classList.add('compopc');
 }
 
 
 function dragDrop() {
-    this.classList.remove('survol')
-
     for (let i=0;i<box.length;i++){
         if (box.item(i) ==this && i ==compo){
             this.append(base[compo]);
             this.classList.remove('compopc');
+            this.classList.remove('survol')
             if (compo == 0){
                 for(element of box){
                     element.classList.add("compopcdev");

@@ -16,7 +16,7 @@ body{
 #boutonsortie{
     position:absolute;
     height:100%;
-    width:1%;/*!important permet de supprimer la valeur minimale de largeur d'un bouton*/
+    width:1%;
     border:none;
     opacity:0;
     z-index:3;
@@ -138,8 +138,6 @@ h1{
     bottom: 38vh;
     margin-left:20vw;
 }
-
-
 
 #cpu{
     width:3em;
