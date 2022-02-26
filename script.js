@@ -81,7 +81,6 @@ function dragDrop() {
             else if ( compo == 1){                
                 document.getElementById("cpu").classList.add('cpu1');
                 document.getElementById("cooler").style.zIndex="9";
-                document.getElementById("d2").style.marginTop = "12.3vh";
             }
             else if(compo == 2){
                 document.getElementById("cooler").classList.add('cooler1'); 

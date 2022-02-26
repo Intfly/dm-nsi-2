@@ -1,3 +1,13 @@
+/*
+
+
+
+    Le site ne marche que pour une mise à l'échelle de 100% sous windows et avec une résolution de 1080p(16/9 et 21/9) ou de 1440p(16/9 et 21/9).
+
+
+
+
+*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300&display=swap');
 
 *{
@@ -173,10 +183,11 @@ h1{
     position:absolute;
     bottom:15em;
 }
-.cooler1,.ram1,.ssd1,.alim1,.hdd1,.gpu1{
+.cooler1,.ram1,.ssd1,.alim1,.hdd1,.gpu1,.cm1{
     position:absolute;
 }
 #cpu{
+    position:absolute;
     width:3.2em;
     height:3.2em;
     bottom:38.2em;
@@ -186,7 +197,6 @@ h1{
 }
 .cpu1{
     position:relative;
-    z-index:7;
 }
 
 #cooler{
@@ -249,15 +259,15 @@ h1{
     position:absolute;
     height:69em;
     width:69em;
-    top:5.9em;
+    top:5em;
     margin-left:7.8em;
     background-image: url("../images/boitier.png");
     background-size: contain;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
 }
 
 .pc{
-    background: linear-gradient(109.6deg, rgba(156,252,248,1), rgba(110,123,251,1));
+    background: linear-gradient(109.6deg, rgb(156,252,248), rgb(110,123,251));
 }
 
 .compopc{
@@ -394,3 +404,86 @@ a:hover{
 }
 
 
+@media (max-height: 1080px){
+   #case{
+    margin-left:6em;
+    top:5em;
+    height:51.75em;
+    width:51.75em;
+   }
+   #carte-mere{
+    width:19em;
+    height:19em;
+    bottom: 17em;
+    margin-left:16.5em;
+}
+.cm1{
+    position:absolute;
+    bottom:15em;
+}
+.cooler1,.ram1,.ssd1,.alim1,.hdd1,.gpu1,.cm1{
+    position:absolute;
+}
+#cpu{
+    width:3.2em;
+    height:3.6em;
+    bottom:27.8em;
+    margin-left:24.5em;
+}
+
+#cooler{
+    width:7em;
+    height:7.5em;
+    bottom:25.7em;
+    margin-left:22.5em; 
+    z-index:7;
+}
+
+#ram{
+    width:3em;
+    height:11em;
+    bottom:24em;
+    margin-left:29em;  
+}
+.ram1{
+    margin-left:29.5em!important;
+    bottom:23em!important;
+    height:10em!important;
+}
+
+#ssd{
+    height:1.6em;
+    width:7em;
+    bottom:23.8em;
+    margin-left:20em; 
+}
+.ssd1{
+    height:1.8em!important;
+    margin-left:19.6em!important;
+}
+
+#hdd{
+    width:9em;
+    height:8em;
+    bottom:9em;
+    margin-left:37em;
+}
+
+#alim{
+    width:12em;
+    height:8em;
+    bottom: 7.5em;
+    margin-left:16em;
+}
+.alim1{
+    bottom: 6.3em!important;
+    margin-left:16em!important;
+}
+
+#gpu{
+    height:4em;
+    width:20em;
+    bottom:19.4em;
+    margin-left:15em;
+}
+}

@@ -1,35 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
 *{
-    margin: 0;
     padding: 0;
-    border: 0;
-    font-weight: 100;
-    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    user-select:none;
 }
-.parallax{
-    background: url('https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat fixed 100%;
-    color: aliceblue;
+
+body{
+    width:100%;
+    height:100%;
+    background:rgb(255, 255, 255);
 }
-.parallax-1{
-    background: url('https://images.pexels.com/photos/3369569/pexels-photo-3369569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat fixed 100%;
-    background-size: cover;
-    color: aliceblue;
+.top{
+    position:absolute;
+    text-align:center;
+    width:100vw;
+    margin-top:4em;
 }
-.parallax-2{
-    background: url('https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat fixed 100%;
-    background-size: cover;
-    color: aliceblue;
+
+.rond{
+    position:absolute;
+    border-radius: 20vh;
+    height:40vh;
+    width:40vh;
+    z-index:1;
 }
-.parallax-inner{
-    padding-top: 20%;
-    padding-bottom: 20%;
+#r1{
+    background:linear-gradient(260deg, rgb(156,252,248), rgb(110,123,251));
+    margin-top:12em;
+    margin-left:calc(50vw - 50em);
 }
-h3{
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+#r2{
+    background:linear-gradient(130deg, rgb(156,252,248), rgb(110,123,251));
+    margin-top:calc(100vh - 40em);
+    margin-left:calc(100vw - 50em);
+}
+
+.grid{
+    position: absolute;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    z-index:2;
+    width:80vw;
+    height:80vh;
+    margin:15vh 0 0 10vw;
+    column-gap:10em; 
+}
+
+.enfant{
+    width:33em;
+    height:22em;
+    border-radius:3em;
+    background: rgba(255, 255, 255, 0.771);
+    z-index: inherit;
+    box-shadow: 0 0 100px 1px rgba(0, 0, 0, 0.404);
+    padding:.5em 0 0 .5em;
+}
+.image{
+    position:absolute;
+    background: rgba(168, 168, 168, 0.219);
+    width:32.5em;
+    height:21.5em;
+    border-radius:2.8em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(.5em);
+    transition: all .4s ease-out;
+    z-index:6;
+}
+.enfant:hover .image{
+    position:absolute;
+    margin-top:16em;
+    width:8.12em;
+    height:5.38em;
+    border-radius:2em;
+    background-size: 4.5em  4.5em !important;
+}
+#im1{
+    background-image: url("../images/cvlogo.png");
+    background-size: 18em 17.5em;
+}
+
+#im2{
+    background-image: url("../images/lettremotivlogo.png");
+    background-size:20em 20em;
+}
+
+#im3{
+    background-image: url("../images/travaillogo.png");
+    background-size: 18em 17.5em;
+}
+
+#im4{
+    background-image: url("../images/pclogo.png");
+    background-size:20em 20em;
+}
+
+.texte{
+    position:relative;
+    width:32.5em;
+    height:21.5em;
+    z-index:5;
+    text-align:center;
+}
+p{
+    padding:2em 4em;
+    font-size:1.25em;
+}
+
+a{
+    position:absolute;
+    top:10.5em;
+    font-size:1.5em;
+    left: 9.5em;
+    text-decoration: none;
+    color:#000;
+    padding:.4em .8em;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.37);
+    border-radius: .5em;
+}
+a:hover{
+    background: rgb(231, 231, 231);
 }
 h1{
-    font-size: 160px;
-    text-align: center;
+    font-size:5em;
+}
+
+@media (max-width: 95em){
+    .grid{
+        gap: 7em 0em;
+    }
+    .image{
+        width:39.5em;
+        height:26.1em;
+    }
+
+    .enfant{
+        width:40em;
+        height:26.66em;
+    }
+
+    .enfant:hover .image{
+        margin-top:21em;
+    }
+
+    a{
+        top:13em;
+        left: 11.5em;
+    }
+    p{
+        padding:2em 0 0 5.5em;
+        font-size:1.5em;
+    }
 }

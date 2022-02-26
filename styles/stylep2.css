@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    user-select:none;
+}
+html{
+    overflow-x: hidden;
+}
+
+.boites{
+    width:100vw;
+    height:100vh;
+}
+
+.langues{
+    position:absolute;
+    top:75vh;
+    background: rgb(175, 175, 175);
+    width:100vw;
+    height:25vh;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    flex-direction: row;
+}
+.niveaul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
+    margin:.4em 0 0 5em;
+    width:25em;
+    height:5em;
+    background:rgba(255, 255, 255, 0.218);
+    border-radius:1.5em;
+}
+
+
+#b2{
+    width:100%;
+    height:100vh;
+    background: linear-gradient(130deg, #3C4CE2, #530095);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20em 10em; 
+    flex-wrap:wrap;
+}
+#h1b2{
+    position:absolute;
+    margin:.5em 0 0 2em;
+    font-size:5em;
+    color:#fff;
+}
+.top{
+    text-align: center;
+}
+h2{
+    font-size:3em;
+    color:#fff;
+    margin-top:1em;
+}
+
+.glass{
+    display:inline-block;
+    height:60em;
+    width:50em;
+    margin-top:5em;
+    border-radius: 7em;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.compet{
+    margin:2.5em 0 0 2em;
+    font-size:2em;
+    color:#fff;
+}
+
+.compet2{
+    margin:.8em 0 0 2em;
+}
+
+.niveau{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
+    margin:.4em 0 0 5em;
+    width:25em;
+    height:5em;
+    background:rgba(255, 255, 255, 0.218);
+    border-radius:1.5em;
+}
+
+.rempli, .pasrempli, .demirempli{
+    width:3em;
+    height:3em;
+    border-radius: 1.5em;
+}
+.rempli{
+    background: #530095;
+}
+.pasrempli{
+    background: #d6d6d694;
+}
+
+.demi-rempli{
+    position:absolute;
+    width:1.4999em;
+    height:3em;
+    background: #530095;
+    border-radius:1.5em 0 0 1.5em;
+}
+.demi-rempli + .demi-rempli{
+    background: #d6d6d694;
+    margin-left:1.5em; 
+    border-radius: 0 1.5em 1.5em 0; 
+}
