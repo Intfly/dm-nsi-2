@@ -14,17 +14,26 @@ html{
     height:100vh;
 }
 
+.pres{
+    position: relative;
+    left:3em;
+    top:2em;
+    width:40em;
+    height:50em;
+    background:linear-gradient(60deg, #ff5fc8 -50%, #fcbf78); /* la valeur -50% permet de faire reculer le point à partir duquel la partie rose commence <=> permet de faire un dégradé moins compacte. voir aussi: https://developer.mozilla.org/fr/docs/Web/CSS/gradient/linear-gradient()*/
+    border-radius: 5em;
+}
+
 .langues{
     position:absolute;
     top:75vh;
-    background: rgb(175, 175, 175);
+    background: linear-gradient(60deg,#FF5ACD,#FBDA61);
     width:100vw;
     height:25vh;
     display:flex;
     justify-content: space-evenly;
-    flex-wrap:wrap;
-    flex-direction: row;
 }
+
 .niveaul{
     display: flex;
     align-items: center;
@@ -36,6 +45,7 @@ html{
     background:rgba(255, 255, 255, 0.218);
     border-radius:1.5em;
 }
+
 
 
 #b2{
@@ -81,6 +91,9 @@ h2{
 .compet2{
     margin:.8em 0 0 2em;
 }
+.txtgros{
+    font-size:3em;
+}
 
 .niveau{
     display: flex;
@@ -117,4 +130,8 @@ h2{
     background: #d6d6d694;
     margin-left:1.5em; 
     border-radius: 0 1.5em 1.5em 0; 
+}
+
+.c2{
+    background:#ca595f;
 }
