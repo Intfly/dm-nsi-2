@@ -14,10 +14,27 @@ html{
     height:100vh;
 }
 
+.buttonmenu{
+    position:absolute;
+    left:1.5em;
+    top:1.5em;
+    width:3.38em;
+    height:3.38em;
+    border-radius:2em;
+    border:none;
+    background-color: #fff ;
+    z-index:2;
+    box-shadow: 0 0 5px 2px rgb(109, 109, 109);
+}
+#logo512px{
+    width:80%;
+    margin:9% 0 0 10%;
+}
+
 .pres{
     position: relative;
-    left:3em;
-    top:2em;
+    left:5em;
+    top:4em;
     width:40em;
     height:50em;
     background:linear-gradient(60deg, #ff5fc8 -50%, #fcbf78); /* la valeur -50% permet de faire reculer le point à partir duquel la partie rose commence <=> permet de faire un dégradé moins compacte. voir aussi: https://developer.mozilla.org/fr/docs/Web/CSS/gradient/linear-gradient()*/
