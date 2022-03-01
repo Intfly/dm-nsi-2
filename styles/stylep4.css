@@ -6,34 +6,96 @@
     user-select:none;
 }
 
+.buttonmenu{
+    position:absolute;
+    left:1.5em;
+    top:1.5em;
+    width:3.38em;
+    height:3.38em;
+    border-radius:2em;
+    border:none;
+    background-color: #fff ;
+    z-index:2;
+    box-shadow: 0 0 5px 2px rgb(109, 109, 109);
+}
+#logo512px{
+    width:80%;
+    margin:9% 0 0 10%;
+}
+
 body{
     width:100%;
     height:100%;
 }
-
-.img1{
-    background: url('https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat fixed 100%;
-    background-size: cover;
-    height:30em;
+a:visited{
+    color:#0000ee;/* habituellement la couleur des liens visités diffère des liens normaux. Nous pouvons modifier la couleur des liens visités afin de les mettre de la même couleur que les liens non visités*/
 }
-.img2{
-    background: url('https://images.pexels.com/photos/3369569/pexels-photo-3369569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat fixed 100%;
+.image1{
+    background-image: url("../images/devloppeur1.png");
     background-size: cover;
-    height:10em;
-}
-.img3{
-    background: url('https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat fixed 100%;
-    background-size: cover;
-    height:10em;
-}
-.parallax-interieur{
-    padding-top: 20% 0;
-    text-align:center;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
 }
 
 h1{
-    font-size:3em;
+    font-size:6em;
+    color:#fff;
 }
 .texte{
     font-size:2em;
+    margin : 11.5vh;
+}
+.t2{
+    margin: 7em 6.5em;
+}
+
+.boite{
+    display:grid; /*permet de rendre la disposition de div plus simple grâce à ses propriétés https://css-tricks.com/snippets/css/complete-guide-grid/*/
+    grid-auto-rows: 100vh;
+    grid-template-columns: 50vw 50vw;
+}
+ul{
+    margin-left:2em;
+}
+
+.image2boite{
+    background:linear-gradient(0deg, rgb(23, 107, 200), rgb(84, 6, 185));   
+}
+.image3boite{
+    background:linear-gradient(0deg, rgb(69, 145, 190), rgb(23, 107, 200));   
+}
+.image4boite{
+    background:linear-gradient(0deg, #e0e0e0, rgb(69, 145, 190));   
+}
+
+.image2,.image3, .image4{
+    margin:12.5%;
+    width:75%;
+    height:75%;
+    border-radius:4em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;/*permet de centrer l'image https://developer.mozilla.org/fr/docs/Web/CSS/background-position */
+}
+.image2{
+    background-image:url("../images/dev2.png");/*permet de définir une image comme arrière plan de div https://developer.mozilla.org/fr/docs/Web/CSS/background-image*/
+    background-color:#0e5ccd;/* le -color indique que la couleur doit se placer en dessous de l'image pour ne pas la cacher*/
+}
+
+.image3{
+    background-image:url("../images/dev3.png");
+    background-color:rgb(69, 146, 198);
+}
+
+.image4{
+    background-image:url("../images/dev4.png"); /*https://www.lucas-uzan.fr/cest-quoi-le-burn-out/*/
+    background-color:#d1d7db;
+}
+
+.diffdev{
+    width:100vw;
+    height:100vh;
 }
