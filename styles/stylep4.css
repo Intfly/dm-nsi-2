@@ -26,6 +26,7 @@
 body{
     width:100%;
     height:100%;
+    overflow-x:hidden;
 }
 a:visited{
     color:#0000ee;/* habituellement la couleur des liens visités diffère des liens normaux. Nous pouvons modifier la couleur des liens visités afin de les mettre de la même couleur que les liens non visités*/
