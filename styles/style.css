@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+/*import de la police poppins pour les pc ne l'ayant pas*/
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    user-select:none;
+    font-family: 'Poppins', sans-serif;/*police pricipale du site*/
+    user-select:none;/*empêche l'utilisateur de séléctionner les éléments du site*/
 }
 
 body{
@@ -12,40 +13,40 @@ body{
 }
 
 .top{
-    position:absolute;
-    text-align:center;
-    width:100vw;
+    position:absolute;/*la position de la div ne sera pas impactée par les autre éléments*/
+    text-align:center;/*centre le texte ou les images présentes dans la div sur l'axe horizontal*/
+    width:100vw;/*vw = viewwidth,  la boite prend 100% de la largeur de l'écran*/
     margin-top:4em;
 }
 
 .rond{
     position:absolute;
-    border-radius: 20vh;
+    border-radius: 20vh;/*bordures rondes*/
     height:40vh;
     width:40vh;
-    z-index:1;
+    z-index:1;/*position du bouton sur l'axe z, je met la div dans l'arrière plan, plus la valeur du z-index est élevée, plus la div est amenée au premier plan, voir: https://developer.mozilla.org/fr/docs/Web/CSS/z-index*/
 }
 #r1{
-    background:linear-gradient(260deg, rgb(156,252,248), rgb(110,123,251));
+    background:linear-gradient(260deg, rgb(156,252,248), rgb(110,123,251));/*dégradé linéaire*/
     margin-top:12em;
-    margin-left:calc(50vw - 50em);
+    margin-left:calc(50vw - 50em);/*permet de faire des caculs simples *,/,+,- sur des unités de mesures différents. voir:https://developer.mozilla.org/fr/docs/Web/CSS/calc()*/
 }
 #r2{
-    background:linear-gradient(130deg, rgb(156,252,248), rgb(110,123,251));
+    background:linear-gradient(130deg, rgb(156,252,248), rgb(110,123,251));/*dégradé linéaire*/
     margin-top:calc(100vh - 40em);
     margin-left:calc(100vw - 50em);
 }
 
 .grid{
     position: absolute;
-    display:flex;
-    justify-content: space-evenly;
-    flex-wrap:wrap;
+    display:flex;/* permet l'utilisation de flexbox et des propriétés qui vont avec*/
+    justify-content: space-evenly;/*définit la position des enfants sur l'axe horizontal. voir: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    flex-wrap:wrap;/*quand les éléments ne peuvent pas être affichés correctement alors ils sont déplacés sur la ligne du dessous*/
     z-index:2;
     width:80vw;
     height:80vh;
     margin:15vh 0 0 10vw;
-    column-gap:10em; 
+    column-gap:10em; /*espacement entre les enfants*/
 }
 
 .enfant{
@@ -53,8 +54,8 @@ body{
     height:22em;
     border-radius:3em;
     background: rgba(255, 255, 255, 0.771);
-    z-index: inherit;
-    box-shadow: 0 0 100px 1px rgba(0, 0, 0, 0.404);
+    z-index: inherit;/*prend la valeur du parent de l'élément*/
+    box-shadow: 0 0 100px 1px rgba(0, 0, 0, 0.404);/*met une ombre autour du bouton, voir https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow */
     padding:.5em 0 0 .5em;
 }
 .image{
@@ -63,24 +64,24 @@ body{
     width:32.5em;
     height:21.5em;
     border-radius:2.8em;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    backdrop-filter: blur(.5em);
-    transition: all .4s ease-out;
+    background-size: contain;/*l'image de fond dont être contenue dans la div, ne doit pas dépasser*/
+    background-repeat: no-repeat;/*l'image de fond ne doit pas se répéter*/
+    background-position: center;/*centre l'image de fond*/
+    backdrop-filter: blur(.5em);/*floute le contenu de la div en dessous de cette div*/
+    transition: all .4s ease-out;/*décrit la transition pour passer du stade développé de l'image au stade réduit(quand on passe notre souris sur la div parent)*/
     z-index:6;
 }
-.enfant:hover .image{
+.enfant:hover .image{/*modifie le comportement de la div .image lorsque l'on passe notre souris sur la div parent*/
     position:absolute;
     margin-top:16em;
     width:8.12em;
     height:5.38em;
     border-radius:2em;
-    background-size: 4.5em  4.5em !important;
+    background-size: 4.5em  4.5em !important;/*valeur qui sera présente sur l'élément, permet d'aller à l'encontre du traitement traditionnel des propriétés en CSS*/
 }
 #im1{
-    background-image: url("../images/cvlogo.png");
-    background-size: 18em 17.5em;
+    background-image: url("../images/cvlogo.png");/*définit l'image d'arrière plan de la div*/
+    background-size: 18em 17.5em;/*taille de l'image*/
 }
 
 #im2{
@@ -128,7 +129,7 @@ h1{
     font-size:5em;
 }
 
-@media (max-width: 95em){
+@media (max-width: 95em){/*media querry, permet de modifier le css sous certaines conditions, en l'occurence quand la largeur de l'ecran est inferieure à 95em, alors les propriétés suivantes sont appliquées. voir: https://developer.mozilla.org/fr/docs/Web/CSS/Media_Queries/Using_media_queries*/  
     .grid{
         gap: 7em 0em;
     }

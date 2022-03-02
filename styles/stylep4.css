@@ -1,48 +1,49 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+/*import de la police poppins pour les pc ne l'ayant pas*/
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    user-select:none;
+    font-family: 'Poppins', sans-serif;/*police pricipale du site*/
+    user-select:none;/*empêche l'utilisateur de séléctionner les éléments du site*/
 }
 
 .buttonmenu{
-    position:absolute;
-    left:1.5em;
-    top:1.5em;
+    position:absolute;/*la position de la div ne sera pas impactée par les autre éléments*/
+    left:1.5em;/* je décale la div  de 1.5em vers la doite*/
+    top:1.5em;/* je descends la div de 1.5em*/
     width:3.38em;
     height:3.38em;
-    border-radius:2em;
-    border:none;
-    background-color: #fff ;
-    z-index:2;
-    box-shadow: 0 0 5px 2px rgb(109, 109, 109);
+    border-radius:2em;/*bordure ronde*/
+    border:none;/*enlève la bordure native des boutons*/
+    background-color: #fff;/*couleur de fond du bouton*/
+    z-index:2;/*position du bouton sur l'axe z, j'amène le bouton au premier plan, plus la valeur du z-index est élevée, plus la div est amenée au premier plan, voir: https://developer.mozilla.org/fr/docs/Web/CSS/z-index*/
+    box-shadow: 0 0 5px 2px rgb(109, 109, 109);/*met une ombre autour du bouton, voir https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow */
 }
 #logo512px{
-    width:80%;
-    margin:9% 0 0 10%;
+    width:80%;/*l'image doit avoir pour largeur 80% de la largeur de la div parent*/
+    margin:9% 0 0 10%;/*centre l'image les valeur correspondent respectivement à margin-top, margin-right, margin-bottom, margin-left*/
 }
 
 body{
     width:100%;
     height:100%;
-    overflow-x:hidden;
+    overflow-x:hidden;/*cache les bouts du site qui peuvent éventuellement dépasser du body*/
 }
 a:visited{
     color:#0000ee;/* habituellement la couleur des liens visités diffère des liens normaux. Nous pouvons modifier la couleur des liens visités afin de les mettre de la même couleur que les liens non visités*/
 }
 .image1{
-    background-image: url("../images/devloppeur1.png");
-    background-size: cover;
+    background-image: url("../images/devloppeur1.png");/* définit une image comme arrière plan de la div*/
+    background-size: cover;/*l'image doit couvrir la div*/
     width:100vw;
     height:100vh;
-    display: flex;
-    align-items:center;
-    justify-content: center;
+    display: flex;/* permet l'utilisation de flexbox et des propriétés qui vont avec*/
+    align-items:center; /*définit la position des enfants sur l'axe vertical. voir: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    justify-content: center;/*définit la position des enfants sur l'axe horizontal. voir: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 }
 
 h1{
-    font-size:6em;
+    font-size:6em;/*taille du texte*/
     color:#fff;
 }
 .texte{
@@ -55,15 +56,15 @@ h1{
 
 .boite{
     display:grid; /*permet de rendre la disposition de div plus simple grâce à ses propriétés https://css-tricks.com/snippets/css/complete-guide-grid/*/
-    grid-auto-rows: 100vh;
-    grid-template-columns: 50vw 50vw;
+    grid-auto-rows: 100vh;/*tous les enfants doivent avoir une hauteur de 100vh, soit la hauteur de l'écran*/
+    grid-template-columns: 48vw 52vw;/*les enfants alternent entre une largeur de 48vw et une largeur de 52vw, soit quasiment la moitité de la largeur de l'écran*/
 }
 ul{
     margin-left:2em;
 }
 
 .image2boite{
-    background:linear-gradient(0deg, rgb(23, 107, 200), rgb(84, 6, 185));   
+    background:linear-gradient(0deg, rgb(23, 107, 200), rgb(84, 6, 185));/*dégradé linéaire de couleur*/
 }
 .image3boite{
     background:linear-gradient(0deg, rgb(69, 145, 190), rgb(23, 107, 200));   
@@ -76,9 +77,9 @@ ul{
     margin:12.5%;
     width:75%;
     height:75%;
-    border-radius:4em;
-    background-repeat: no-repeat;
-    background-size: contain;
+    border-radius:4em;/*permet d'avoir des bords ronds*/
+    background-repeat: no-repeat;/*l'image de fond ne doit pas se répéter*/
+    background-size: contain;/*l'image de fond dont être contenue dans la div, ne doit pas dépasser*/
     background-position: center;/*permet de centrer l'image https://developer.mozilla.org/fr/docs/Web/CSS/background-position */
 }
 .image2{

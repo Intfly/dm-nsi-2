@@ -1,54 +1,45 @@
-/*
-
-
-
-    Le site ne marche que pour une mise à l'échelle de 100% sous windows et avec une résolution de 1080p(16/9 et 21/9) ou de 1440p(16/9 et 21/9).
-
-
-
-
-*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;300&display=swap');
-
+/*import de la police poppins pour les pc ne l'ayant pas*/
 *{
-    user-select:none;
+    user-select:none;/*empêche l'utilisateur de séléctionner les éléments du site*/
 }
 
 body{
-    height: 100vh;
-    width:100vw;
+    height: 100vh;/*vh = viewheight, la boite prend 100% de la hauteur de l'écran*/
+    width:100vw;/*vw = viewwidth,  la boite prend 100% de la largeur de l'écran*/
     margin:0;
-    overflow: hidden;
+    overflow: hidden; /* permet de cacher les bouts du site qui sortent du cadre.*/
 }
 
 .boutoninterro{
-    margin-left:90%;
-    border:solid .1em rgba(51, 51, 51, 0.555);
-    background:#fff;
-    border-radius: 1em;
-    color:rgba(51, 51, 51, 0.555);
+    margin-left:90%;/*déplace le bouton de 90% de la largeur du conteneur.*/
+    border:solid .1em rgba(51, 51, 51, 0.555);/*bordure autour du bouton */
+    background:#fff;/*couleur d'arrière plan du bouton*/
+    border-radius: 1em;/*bordure ronde*/
+    color:rgba(51, 51, 51, 0.555);/*couleur du texte*/
 }
 
 #fini{
-    display:none;
-    position:absolute;
-    left:42.5vw;
+    display:none;/*n'affiche pas la div tant que tous les éléments ne sont pas placés*/
+    position:absolute;/*la position de la div ne sera pas impactée par les autre éléments*/
+    left:42.5vw;/*déplace la div à gauche*/
     top:42.5vh;
     width:15vw;
     height:15vh;
     border-radius: 2em;
-    box-shadow: 0 0 10vw 45vw rgba(0, 0, 0, 0.322);
+    box-shadow: 0 0 10vw 45vw rgba(0, 0, 0, 0.322);/*ombre autour de la div*/
     background: #fff;
     text-align: center;
     z-index:100;
 }
 
 #pfini{
-font-family: 'Roboto','sans-serif';
+font-family: 'Roboto','sans-serif';/*police du texte*/
 margin-bottom:1.5em;
 }
+
 #boutonfini{
-    border:none;
+    border:none;/*enlève la bordure par défaut des boutons*/
     background: #fff;
     box-shadow: 0 0 .5em .2em rgba(0, 0, 0, 0.356);
     border-radius:.6em;
@@ -57,9 +48,9 @@ margin-bottom:1.5em;
 }
 
 .grid{
-    display: grid;
-    grid-template-columns: 0px 5vw 25vw auto;
-    grid-auto-rows: 100vh;
+    display: grid;/*permet de rendre la disposition de div plus simple grâce à ses propriétés https://css-tricks.com/snippets/css/complete-guide-grid/*/
+    grid-template-columns: 0px 5vw 25vw auto;/*la largeur des enfants est respectivement de 0px, 5vw, 25w et la dernière div prend l'espace restant*/
+    grid-auto-rows: 100vh;/*tous les enfants doivent avoir une hauteur de 100vh, soit la hauteur de l'écran*/
 }
 
 #boutonsortie{
@@ -67,41 +58,41 @@ margin-bottom:1.5em;
     height:100%;
     width:1%;
     border:none;
-    opacity:0;
-    z-index:3;
+    opacity:0;/*n'affiche pas le bouton tant que le menu n'est pas ouvert*/
+    z-index:3;/*position du bouton sur l'axe z, plus la valeur du z-index est élevée, plus la div est amenée au premier plan, voir: https://developer.mozilla.org/fr/docs/Web/CSS/z-index*/
     padding:0;
 }
 
 .boutonsortiedev{
     left:25vw;
-    width: 100%!important;
+    width: 100%!important;/*valeur qui sera présente sur l'élément, permet d'aller à l'encontre du traitement traditionnel des propriétés en CSS*/
 }
 
 .top{
-    margin:7vh 0 3vh 0;
+    margin:7vh 0 3vh 0;/*les valeur correspondent respectivement à margin-top, margin-right, margin-bottom, margin-left*/
 }
 h1{
     margin:0;
     font-family: 'Roboto', sans-serif;
     color: rgb(53, 53, 53);
     font-size:2.5em;
-    text-decoration: underline;
-    text-decoration-thickness: .03em;
-    text-underline-offset: .1em;
-    text-decoration-color: rgb(63, 63, 63);
-    font-weight: 100;
-    text-align: center;
+    text-decoration: underline;/*souligne les textes dans des balises h1*/
+    text-decoration-thickness: .03em;/*hauteur du trait de soulignement*/
+    text-underline-offset: .1em;/*décalage du trait par rapport au texte*/
+    text-decoration-color: rgb(63, 63, 63);/*couleur du trait*/
+    font-weight: 100;/*paramètre de la typo, plus le poids est élevé, plus le texte sera gras*/
+    text-align: center;/*centre le texte*/
 }
 .barre{
     background: #fff;
     width:0vw;
     z-index:1;
-    transition: all .5s ease-out;
+    transition: all .5s ease-out;/*décrit la transition du dévloppement de la barre latérale*/
 }
 
 .dev{
     width:25vw;
-    box-shadow: 0px 0px 100em 30vw rgba(0, 0, 0, 0.397);
+    box-shadow: 0px 0px 100em 30vw rgba(0, 0, 0, 0.397);/*ombre autour de la div*/
 }
 
 .container{
@@ -111,31 +102,31 @@ h1{
 
 .images{
     position:relative;
-    cursor: pointer;
+    cursor: pointer;/*définit le pointeur de souris lorsque la souris passe sur l'element*/
     width:100%;
     height:90%;
 }
 
 .composants{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: flex;/* permet l'utilisation de flexbox et des propriétés qui vont avec*/
+    align-items: center;/*définit la position des enfants sur l'axe vertical. voir: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    justify-content: center;/*définit la position des enfants sur l'axe horizontal. voir: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    flex-direction: column;/*direction du grid, l'élément 1 est en haut et l'élément 2 est en bas*/
 }
 .mini{
-    display:none;
+    display:none;/*n'affiche pas l'élément*/
 }
 
 #d1{
-    background-image: url('../images/mb.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-image: url('../images/mb.png');/* définit une image comme arrière plan de la div*/
+    background-size: contain;/*l'image de fond dont être contenue dans la div, ne doit pas dépasser*/
+    background-repeat: no-repeat;/*l'image ne doit pas se répéter*/
 }
 
 
 #d2{
     background-image: url('../images/cpu.png');
-    background-size: cover;   
+    background-size: cover;/*l'image doit couvrir la div*/   
 }
 
 #d3{
@@ -176,22 +167,21 @@ h1{
     width:23.5em;
     height:23.5em;
     display:block;
-    bottom: 24.5em;
-    margin-left:22em;
+    margin-top: 12em;
+    margin-left:22.5em;
 }
 .cm1{
     position:absolute;
-    bottom:15em;
 }
 .cooler1,.ram1,.ssd1,.alim1,.hdd1,.gpu1,.cm1{
     position:absolute;
 }
 #cpu{
     position:absolute;
-    width:3.2em;
-    height:3.2em;
-    bottom:38.2em;
-    margin-left:31.5em;
+    width:3.7em;
+    height:4em;
+    bottom:37.2em;
+    margin-left:32em;
     border-radius: 1.5em;
     z-index:8;
 }
@@ -202,8 +192,8 @@ h1{
 #cooler{
     width:7em;
     height:7em;
-    bottom:36.7em;
-    margin-left:29.5em; 
+    bottom:36em;
+    margin-left:30em; 
     z-index:7;
 }
 .cooler1{
@@ -213,17 +203,18 @@ h1{
 #ram{
     width:3em;
     height:12em;
-    bottom:34em;
-    margin-left:37.5em;  
+    bottom:32em;
+    margin-left:38em;  
 }
 .ram1{
     z-index:9;
+    margin-bottom:1em;
 }
 
 #ssd{
     height:2em;
     width:7em;
-    bottom:33em;
+    bottom:32.5em;
     margin-left:28em; 
 }
 .ssd1{
@@ -244,14 +235,13 @@ h1{
     margin-left:21em;
 }
 .alim1{
-    bottom:15.6em!important;
-    margin-left:18em!important;
+    bottom:9em!important;
 }
 
 #gpu{
     height:4em;
     width:20em;
-    bottom:28.5em;
+    bottom:27.7em;
     margin-left:22em;
 }
 
@@ -259,7 +249,7 @@ h1{
     position:absolute;
     height:69em;
     width:69em;
-    top:5em;
+    margin-top:calc(100vh - 55em);
     margin-left:7.8em;
     background-image: url("../images/boitier.png");
     background-size: contain;
@@ -404,86 +394,3 @@ a:hover{
 }
 
 
-@media (max-height: 1080px){
-   #case{
-    margin-left:6em;
-    top:5em;
-    height:51.75em;
-    width:51.75em;
-   }
-   #carte-mere{
-    width:19em;
-    height:19em;
-    bottom: 17em;
-    margin-left:16.5em;
-}
-.cm1{
-    position:absolute;
-    bottom:15em;
-}
-.cooler1,.ram1,.ssd1,.alim1,.hdd1,.gpu1,.cm1{
-    position:absolute;
-}
-#cpu{
-    width:3.2em;
-    height:3.6em;
-    bottom:27.8em;
-    margin-left:24.5em;
-}
-
-#cooler{
-    width:7em;
-    height:7.5em;
-    bottom:25.7em;
-    margin-left:22.5em; 
-    z-index:7;
-}
-
-#ram{
-    width:3em;
-    height:11em;
-    bottom:24em;
-    margin-left:29em;  
-}
-.ram1{
-    margin-left:29.5em!important;
-    bottom:23em!important;
-    height:10em!important;
-}
-
-#ssd{
-    height:1.6em;
-    width:7em;
-    bottom:23.8em;
-    margin-left:20em; 
-}
-.ssd1{
-    height:1.8em!important;
-    margin-left:19.6em!important;
-}
-
-#hdd{
-    width:9em;
-    height:8em;
-    bottom:9em;
-    margin-left:37em;
-}
-
-#alim{
-    width:12em;
-    height:8em;
-    bottom: 7.5em;
-    margin-left:16em;
-}
-.alim1{
-    bottom: 6.3em!important;
-    margin-left:16em!important;
-}
-
-#gpu{
-    height:4em;
-    width:20em;
-    bottom:19.4em;
-    margin-left:15em;
-}
-}

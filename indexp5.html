@@ -15,32 +15,32 @@
         <p id ="pfini">bien joué, vous avez fini</p>
         <button id="boutonfini" onclick="boutonfiniok()">ok!</button>
     </div>
-    <div class="grid">
+    <div class="grid"><!--div englobant les autres, me permet de définir facilement la position des enfant grâce à la propriété display:grid-->
         <div class="dropdown">
-            <div class="sand">
+            <div class="sand"><!--bouton affichant le menu-->
                 <button id="busd" onclick="menu()"><div id="s1"></div><div id="s2"></div><div id="s3"></div></button>
             </div>
-            <a href="http://valentinf.xyz/DM-NSI-2/indexp5.html" class="buttonmenu"><img src="images/refresh.png" alt="bouton relance site" id="logo96px"></a>
+            <a href="http://valentinf.xyz/DM-NSI-2/indexp5.html" class="buttonmenu"><img src="images/refresh.png" alt="bouton relance site" id="logo96px"></a><!--lien-->
             <a href="https://github.com/Intfly/DM-NSI-2"  class="buttonmenu"><img src="images/github.png" alt="logo github" id="logo512px"></a>
             <a href="http://valentinf.xyz/DM-NSI-2/" class="buttonmenu"><img src="images/web.png" alt="logo monde" id="logo512px"></a>
         </div> 
-        <div class="barre">
-            <h2>menu</h2>
+        <div class="barre"><!--barre lattérale qui s'affiche une fois qu'on clique sur le bouton sandwich-->
+            <h2>menu</h2><!--texte décrivant les icones-->
             <h2>recharger</h2>
             <h2>repo github</h2>
-            <h2>autres sites </h2>
+            <h2>autres sites</h2>
         </div>
-        <div class="container">
-            <div class="top">
+        <div class="container"><!--menu défilant avec les différents composants à placer dans le pc-->
+            <div class="top"><!--div avec du texte en haut du menu défilant-->
                 <h1>composants</h1>
             </div>
             <div class="composants">
                 <div class="compo" id="di1">
-                    <button id="bt1" onclick="btinterro(this.id)" class="boutoninterro">?</button>
-                    <div class="interro"><p id="p1" class="interrogation_txt">la carte mère est le composant principal du pc, elle relie les composants entre eux. Elle se place en haut à gauche du boitier.</p></div>
-                    <div id="d1" draggable="true" class="images"></div>
+                    <button id="bt1" onclick="btinterro(this.id)" class="boutoninterro">?</button><!--bouton expliquant le fonctionnement du composant-->
+                    <div class="interro"><p id="p1" class="interrogation_txt">la carte mère est le composant principal du pc, elle relie les composants entre eux. Elle se place en haut à gauche du boitier.</p></div><!--texte décrivant le composant-->
+                    <div id="d1" draggable="true" class="images"></div><!--image du composant-->
                 </div>
-                <div class="compo" id="di2">
+                <div class="compo" id="di2"><!--même pattern-->
                     <button id="bt2" onclick="btinterro(this.id)" class="boutoninterro">?</button>
                     <div class="interro"><p id="p2" class="interrogation_txt">le CPU(ou processeur) met en relation les différents composants du pc. Il se situe au centre de la carte mère.</p></div>
                     <div id="d2" draggable="true" class="images"></div>
@@ -77,7 +77,7 @@
                 </div>
             </div>
         </div>
-        <div class="pc">
+        <div class="pc"><!--les emplacements des composants, s'affichent une fois que certaines conditions sont respectées-->
             <div id="case"></div>
             <div id="carte-mere" class="compopc"></div>
             <div id="cpu" class="compopc"></div>

@@ -88,7 +88,6 @@ function dragDrop() {
             else if(compo == 3){
                 document.getElementById("ram").classList.add('ram1');
                 document.getElementById("d4").style.backgroundImage = "url('images/ramt.png')";
-                document.getElementById("d4").style.bottom = "2vh";
             }
             else if(compo == 4){
                 document.getElementById("ssd").classList.add('ssd1');

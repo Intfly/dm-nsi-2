@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+/*import de la police poppins pour les pc ne l'ayant pas*/
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    user-select:none;
+    font-family: 'Poppins', sans-serif;/*police pricipale du site*/
+    user-select:none;/*empêche l'utilisateur de séléctionner les éléments du site*/
 }
 
 body{
@@ -11,20 +12,19 @@ body{
     height:100%;
 }
 
-
 .buttonmenu{
-    position:absolute;
-    left:1.5em;
-    top:1.5em;
+    position:absolute;/*la position de la div ne sera pas impactée par les autre éléments*/
+    left:1.5em;/* je décale la div  de 1.5em vers la doite*/
+    top:1.5em;/* je descends la div de 1.5em*/
     width:3.38em;
     height:3.38em;
-    border-radius:2em;
-    border:none;
-    background-color: #fff ;
-    z-index:2;
-    box-shadow: 0 0 5px 2px rgb(109, 109, 109);
+    border-radius:2em;/*bordure ronde*/
+    border:none;/*enlève la bordure native des boutons*/
+    background-color: #fff;/*couleur de fond du bouton*/
+    z-index:2;/*position du bouton sur l'axe z, j'amène le bouton au premier plan, plus la valeur du z-index est élevée, plus la div est amenée au premier plan, voir: https://developer.mozilla.org/fr/docs/Web/CSS/z-index*/
+    box-shadow: 0 0 5px 2px rgb(109, 109, 109);/*met une ombre autour du bouton, voir https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow */
 }
 #logo512px{
-    width:80%;
-    margin:9% 0 0 10%;
+    width:80%;/*l'image doit avoir pour largeur 80% de la largeur de la div parent*/
+    margin:9% 0 0 10%;/*centre l'image les valeur correspondent respectivement à margin-top, margin-right, margin-bottom, margin-left*/
 }

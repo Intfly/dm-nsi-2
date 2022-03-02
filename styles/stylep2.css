@@ -1,34 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+/*import de la police poppins pour les pc ne l'ayant pas*/
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    user-select:none;
+    font-family: 'Poppins', sans-serif;/*police pricipale du site*/
+    user-select:none;/*empêche l'utilisateur de séléctionner les éléments du site*/
 }
 html{
-    overflow-x: hidden;
+    overflow-x: hidden; /* permet de cacher les bouts du site qui sortent du cadre.*/
 }
 
-.boites{
-    width:100vw;
-    height:100vh;
+.boites{/*je sépare le site en deux boites faisant toutes deux la longueur et la largeur de l'écran.*/
+    width:100vw;/*vw = viewwidth,  la boite prend 100% de la largeur de l'écran*/
+    height:100vh;/*vh = viewheight, la boite prend 100% de la hauteur de l'écran*/
 }
 
 .buttonmenu{
-    position:absolute;
-    left:1.5em;
-    top:1.5em;
+    position:absolute;/*la position de la div ne sera pas impactée par les autre éléments*/
+    left:1.5em;/* je décale la div  de 1.5em vers la doite*/
+    top:1.5em;/* je descends la div de 1.5em*/
     width:3.38em;
     height:3.38em;
-    border-radius:2em;
-    border:none;
-    background-color: #fff ;
-    z-index:2;
-    box-shadow: 0 0 5px 2px rgb(109, 109, 109);
+    border-radius:2em;/*bordure ronde*/
+    border:none;/*enlève la bordure native des boutons*/
+    background-color: #fff;/*couleur de fond du bouton*/
+    z-index:2;/*position du bouton sur l'axe z, j'amène le bouton au premier plan, plus la valeur du z-index est élevée, plus la div est amenée au premier plan, voir: https://developer.mozilla.org/fr/docs/Web/CSS/z-index*/
+    box-shadow: 0 0 5px 2px rgb(109, 109, 109);/*met une ombre autour du bouton, voir https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow */
 }
 #logo512px{
-    width:80%;
-    margin:9% 0 0 10%;
+    width:80%;/*l'image doit avoir pour largeur 80% de la largeur de la div parent*/
+    margin:9% 0 0 10%;/*centre l'image les valeur correspondent respectivement à margin-top, margin-right, margin-bottom, margin-left*/
 }
 
 .pres{
@@ -37,7 +38,7 @@ html{
     top:4em;
     width:40em;
     height:50em;
-    background:linear-gradient(60deg, #ff5fc8 -50%, #fcbf78); /* la valeur -50% permet de faire reculer le point à partir duquel la partie rose commence <=> permet de faire un dégradé moins compacte. voir aussi: https://developer.mozilla.org/fr/docs/Web/CSS/gradient/linear-gradient()*/
+    background:linear-gradient(60deg, #ff5fc8 -50%, #fcbf78); /* la valeur -50% permet de faire reculer le point à partir duquel la partie rose commence <=> permet de faire un dégradé moins compacte. voir: https://developer.mozilla.org/fr/docs/Web/CSS/gradient/linear-gradient()*/
     border-radius: 5em;
 }
 .moi_txt{
@@ -52,8 +53,8 @@ html{
 }
 
 #moi{
-    background-image: url("../images/moi.png");
-    background-size: contain;
+    background-image: url("../images/moi.png");/* définit une image comme arrière plan de la div*/
+    background-size: contain;/*l'image de fond dont être contenue dans la div, ne doit pas dépasser*/
     width:7em;
     height:7em;
     border-radius: 3.5em;
@@ -65,16 +66,16 @@ html{
 .langues{
     position:absolute;
     top:75vh;
-    background: linear-gradient(60deg,#FF5ACD,#FBDA61);
+    background: linear-gradient(60deg,#FF5ACD,#FBDA61);/*dégradé linéaire*/
     width:100vw;
     height:25vh;
-    display:flex;
-    justify-content: space-evenly;
+    display:flex;/* permet l'utilisation de flexbox et des propriétés qui vont avec*/
+    justify-content: space-evenly;/*définit la position des enfants sur l'axe horizontal. voir: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 }
 
 .niveaul{
     display: flex;
-    align-items: center;
+    align-items: center;/*définit la position des enfants sur l'axe vertical. voir: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
     justify-content: center;
     column-gap: 1em;
     margin:.4em 0 0 5em;
@@ -110,7 +111,6 @@ h2{
 }
 
 .glass{
-    display:inline-block;
     height:60em;
     width:50em;
     margin-top:5em;
@@ -162,10 +162,10 @@ h2{
     background: #530095;
     border-radius:1.5em 0 0 1.5em;
 }
-.demi-rempli + .demi-rempli{
+.demi-rempli + .demi-rempli{/* quand un element avec la classe .demi-rempli est suivie par un element avec la même classe alors la deuxième div a les propriétés suivantes*/
     background: #d6d6d694;
     margin-left:1.5em; 
-    border-radius: 0 1.5em 1.5em 0; 
+    border-radius: 0 1.5em 1.5em 0;/* définit les bordures rondes côté par côté*/
 }
 
 .c2{
