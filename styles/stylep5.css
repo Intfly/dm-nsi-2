@@ -167,7 +167,7 @@ h1{
     width:23.5em;
     height:23.5em;
     display:block;
-    margin-top: 12em;
+    margin-top: calc(100vh - 48em);
     margin-left:22.5em;
 }
 .cm1{
