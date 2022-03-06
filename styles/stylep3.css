@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
 /*import de la police poppins pour les pc ne l'ayant pas*/
 *{
+    color:rgb(29, 29, 29);
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;/*police pricipale du site*/
@@ -27,4 +28,22 @@ body{
 #logo512px{
     width:80%;/*l'image doit avoir pour largeur 80% de la largeur de la div parent*/
     margin:9% 0 0 10%;/*centre l'image les valeur correspondent respectivement à margin-top, margin-right, margin-bottom, margin-left*/
+}
+
+.texte{
+    margin:7em 25em 0 10em;
+}
+p{
+    margin-top:1em;
+    font-size:1.5em;
+}
+
+.souligne{
+    margin-top:2em;
+    text-decoration:underline;
+    font-size:1.55em;
+}
+
+a:hover{
+    color:rgb(65, 65, 65);
 }
