@@ -36,8 +36,8 @@ html{
     position: relative;
     left:5em;
     top:4em;
-    width:40em;
-    height:50em;
+    width:32em;
+    height:40em;
     background:linear-gradient(60deg, #ff5fc8 -50%, #fcbf78); /* la valeur -50% permet de faire reculer le point à partir duquel la partie rose commence <=> permet de faire un dégradé moins compacte. voir: https://developer.mozilla.org/fr/docs/Web/CSS/gradient/linear-gradient()*/
     border-radius: 5em;
 }
@@ -60,15 +60,15 @@ html{
     border-radius: 3.5em;
     position:absolute;
     margin-top:5em;
-    margin-left:27em;
+    margin-left:20em;
 }
 
 .langues{
     position:absolute;
-    top:75vh;
+    top:78vh;
     background: linear-gradient(60deg,#FF5ACD,#FBDA61);/*dégradé linéaire*/
     width:100vw;
-    height:25vh;
+    height:22vh;
     display:flex;/* permet l'utilisation de flexbox et des propriétés qui vont avec*/
     justify-content: space-evenly;/*définit la position des enfants sur l'axe horizontal. voir: https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 }
@@ -98,7 +98,7 @@ html{
 #h1b2{
     position:absolute;
     margin:.5em 0 0 2em;
-    font-size:5em;
+    font-size:4em;
     color:#fff;
 }
 .top{
@@ -111,21 +111,21 @@ h2{
 }
 
 .glass{
-    height:60em;
-    width:50em;
+    height:47em;
+    width:37em;
     margin-top:5em;
     border-radius: 7em;
     background: rgba(255, 255, 255, 0.12);
 }
 
 .compet{
-    margin:2.5em 0 0 2em;
-    font-size:2em;
+    margin:1em 0 0 2em;
+    font-size:1.7em;
     color:#fff;
 }
 
 .compet2{
-    margin:.8em 0 0 2em;
+    margin:.4em 0 0 2em;
 }
 .txtgros{
     font-size:3em;
@@ -138,14 +138,14 @@ h2{
     column-gap: 1em;
     margin:.4em 0 0 5em;
     width:25em;
-    height:5em;
+    height:4em;
     background:rgba(255, 255, 255, 0.218);
     border-radius:1.5em;
 }
 
 .rempli, .pasrempli, .demirempli{
-    width:3em;
-    height:3em;
+    width:2.4em;
+    height:2.4em;
     border-radius: 1.5em;
 }
 .rempli{
@@ -157,14 +157,14 @@ h2{
 
 .demi-rempli{
     position:absolute;
-    width:1.4999em;
-    height:3em;
+    width:1.2em;
+    height:2.4em;
     background: #530095;
     border-radius:1.5em 0 0 1.5em;
 }
 .demi-rempli + .demi-rempli{/* quand un element avec la classe .demi-rempli est suivie par un element avec la même classe alors la deuxième div a les propriétés suivantes*/
     background: #d6d6d694;
-    margin-left:1.5em; 
+    margin-left:1.2em; 
     border-radius: 0 1.5em 1.5em 0;/* définit les bordures rondes côté par côté*/
 }
 
