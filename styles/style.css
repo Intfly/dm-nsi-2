@@ -129,7 +129,7 @@ h1{
     font-size:5em;
 }
 
-@media (max-width: 95em){/*media querry, permet de modifier le css sous certaines conditions, en l'occurence quand la largeur de l'ecran est inferieure à 95em, alors les propriétés suivantes sont appliquées. voir: https://developer.mozilla.org/fr/docs/Web/CSS/Media_Queries/Using_media_queries*/  
+@media (max-width: 95em){/*media querry, permet de modifier le css sous certaines conditions, en l'occurence lorsque la largeur de l'ecran est inferieure à 95em. Dans ce cas les propriétés suivantes sont appliquées. voir: https://developer.mozilla.org/fr/docs/Web/CSS/Media_Queries/Using_media_queries*/  
     .grid{
         gap: 7em 0em;
     }
