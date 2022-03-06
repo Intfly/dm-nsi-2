@@ -41,7 +41,6 @@ for (let bas of base){/*pour chaque element de la nodelist*/
 /*this correpond à l'element selectionné this = bas*/
 function dbtdeplacement() {
     setTimeout(() => (this.className = 'invisible'), 0);/*met un timer de 0ms qui enlève toutes les classes de l'élément et ajoute une classe vierge afin de faire disparaitre l'élément en déplacement. voir: https://stackoverflow.com/a/20734159/16474797*/
-    
     for (let i=0;i<base.length;i++){/*je retrouve l'id de l'image selectionnée grâce à une boule for qui a pour longueur la taille de la nodelist base*/
         if (base.item(i) ==this){/*on regarde si l'element i de la nodelist correspond à this(donc à l'image selectionnée)*/ 
             globalThis.compo = i;/*rend global l'id de l'image selectionné(l'id de bas)*/
@@ -113,7 +112,7 @@ function relachement() {
             }
 
             compo_array.push(i);/*ajout de l'indice de l'élément placé dans l'array "compo_array"(équivalent d'un tableau)*/
-            if (compo_array.length == 8){/*si tous les éléments ont été placés, alors la longueur de l'array vaut 8 donc le bouton nous disant qu'on a fini apparaît*/
+            if (compo_array.length == 8){/*si tous les éléments ont été placés, alors la longueur de l'array vaut 8 donc le bouton nous disant qu'on a fini apparaît, j'aurais pu me servir d'un compteur avec un integer mais j'avais envie d'apprendre à me servir des arrays.*/
                 document.getElementById("fini").style.display="block";/*fait apparaître le message disant qu'on a réussi*/
             }
         }

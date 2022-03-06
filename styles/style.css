@@ -16,7 +16,7 @@ body{
     position:absolute;/*la position de la div ne sera pas impactée par les autre éléments*/
     text-align:center;/*centre le texte ou les images présentes dans la div sur l'axe horizontal*/
     width:100vw;/*vw = viewwidth,  la boite prend 100% de la largeur de l'écran*/
-    margin-top:4em;
+    margin-top:2em;
 }
 
 .rond{
@@ -154,5 +154,9 @@ h1{
     p{
         padding:2em 0 0 5.5em;
         font-size:1.5em;
+    }
+
+    .top{
+        margin-top:6em;
     }
 }
