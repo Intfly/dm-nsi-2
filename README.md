@@ -4,4 +4,4 @@
 1. Un CV
 1. une lettre de motivation
 1. Presentation d'un métier
-1. simulation de céation de pc 
+1. simulation de montage d'un pc 
